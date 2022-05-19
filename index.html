@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jquery.dataTables colResize test</title>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<!-- DataTable -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
+
+<!-- Plugin -->
+<link rel="stylesheet" href="editable.css">
+<script src="editable.js"></script>
+
+<script>
+$(document).ready(function () {
+    $('#example').DataTable({
+    });
+});
+</script>
+</head>
+
+<body>
+    <table id="example" class="display">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="editable">
+                    <span class="edit-data">Tiger Nixon</span>
+                </td>
+                <td class="editable">
+                    <span 
+                        class="edit-data"
+                        data-edit-type="select"
+                        data-edit-valu="architect"
+                        data-edit-clear="1"
+                        data-edit-options='[{"label":"System Architect", "value":"architect"}, {"label":"Customer Support", "value":"support"}]'>System Architect</span></td>
+                <td class="editable">
+                    <span class="edit-data">New York</span>
+                </td>
+                <td class="editable">
+                    <span 
+                        class="edit-data" 
+                        data-edit-url="update">61</span>
+                </td>
+                <td class="editable">
+                    <span class="edit-data">2011/04/25</span>
+                </td>
+                <td class="editable">
+                    <span class="edit-data" data-edit-type="number" data-edit-valu="320.8">$320,800</span>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
